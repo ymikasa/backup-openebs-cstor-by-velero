@@ -1,0 +1,13 @@
+apiVersion: velero.io/v1
+kind: VolumeSnapshotLocation
+metadata:
+  name: default
+  namespace: velero
+spec:
+  provider: openebs.io/cstor-blockstore
+  config:
+    bucket: <your backet name>
+    prefix: openebs
+    provider: aws
+    region: us-east-2
+    s3Url: s3.amazonaws.com
